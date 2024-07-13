@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Syne", sans-serif;
+}
+
+ul {
+  list-style: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 2em;
+}
+
+.hero-tabs {
+  height: 140px;
+  position: relative;
+  text-align: center;
+}
+
+.hero-tabs h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    padding-top: .75rem;
+}
+
+.hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+}
+
+.hero-tabs-container--top {
+    position: fixed;
+    top: 0px;
+}
+
+.hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+}
+
+.hero-tab:hover {
+    color: white;
+    background: #000;
+    transition: all 0.5s ease;
+  letter-spacing: 3px;
+}
+
+.hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+    .hero-tabs h1 {
+        font-size: 2rem;
+    }
+
+    .hero-tab {
+        font-size: 1rem;
+    }
+}
